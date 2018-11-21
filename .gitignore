@@ -4,3 +4,5 @@ __pycache__/*
 vcpkg
 .idea/*
 .vscode/*
+resources/__pycache__/
+models/__pycache__/

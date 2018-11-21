@@ -8,8 +8,8 @@ from models.expense import ExpenseModel
 
 class Expense(Resource):
     parser = reqparse.RequestParser()
-    parser.add_argument("name",type=str ,required=True,help="This field is required")
-    parser.add_argument("price",type=float ,required=True,help="This field is required")
+    parser.add_argument("name",type=str ,required=True,help="The name field is required")
+    parser.add_argument("price",type=float ,required=True,help="The price field is required")
     parser.add_argument("category",type=str )
 
     @jwt_required()
