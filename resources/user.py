@@ -38,11 +38,15 @@ class User(Resource):
 
     @jwt_required()
     def delete(self):
-        user = current_identity
-        for expense in user.expenses:
-            expense.delete_from_db()
-        user.delete_from_db()
-        return {"message":"Account deleted"}
+        try:
+            user = current_identity
+            for expense in user.expenses:
+                expense.delete_from_db()
+            user.delete_from_db()
+            return {"message":"Account deleted"}
+        except:
+            return {"message":"An error occured while deleting account"},500
+       
 
 class UserChangePassword(Resource):
     parser = reqparse.RequestParser()
@@ -59,7 +63,7 @@ class UserChangePassword(Resource):
             user.save_to_db()
             return {"message": "Password successfully updated"}
 
-        return {"message":"Password mismatch"}
+        return {"message":"Password is incorrect"},400
 
 
 class UserResetPassword(Resource):
