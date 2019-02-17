@@ -1,6 +1,6 @@
 Flask==1.0.2
 Flask-RESTful==0.3.6
-Flask-JWT-Extended==3.13.0
+Flask-JWT
 Flask-SQLALchemy==2.3.2
 Flask-Mail==0.9.1
 Flask-Bcrypt==0.7.1
