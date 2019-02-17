@@ -1,0 +1,10 @@
+Flask==1.0.2
+Flask-RESTful==0.3.6
+Flask-JWT-Extended==3.13.0
+Flask-SQLALchemy==2.3.2
+Flask-Mail==0.9.1
+Flask-Bcrypt==0.7.1
+Flask-Migrate==2.2.1
+Flask-MySQL==1.4.0
+Flask-restful-swagger-2==0.35
+Flask-Cors==3.0.6
